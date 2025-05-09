@@ -1,0 +1,22 @@
+### Créer une invitation
+POST http://localhost:8084/api/invitations
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc0NTg3MDUxNywiZXhwIjoxNzQ1ODc0MTE3fQ._vozdIlc7oxzS57uSzHeSGWdbnCX2dlgsOzJCLl3HmY
+
+{
+  "email": "user@example.com"
+}
+
+> {%
+client.global.set("invitation_id", response.body.id);
+%}
+###
+
+### Valider une invitation
+POST http://localhost:8084/api/invitations/validate
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc0NTg0OTUxMywiZXhwIjoxNzQ1ODUzMTEzfQ.EcdN2pECYC1GH_f-IKp80UoTEXqfpyjYY-ss4Z0fnj0
+
+{
+  "token": "cea99d5f-e7b4-4fdb-b765-e552c546c1c5"
+}
