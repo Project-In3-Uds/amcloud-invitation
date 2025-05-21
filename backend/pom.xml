@@ -30,6 +30,14 @@
 		<java.version>17</java.version>
 		<spring-cloud.version>2024.0.1</spring-cloud.version> <!-- Define the Spring Cloud BOM version -->
 	</properties>
+
+	<repositories>
+    <repository>
+      <id>github</id>
+      <name>GitHub Project-In3-Uds Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/Project-In3-Uds/amcloud-security-shared</url>
+    </repository>
+  </repositories>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
