@@ -30,6 +30,7 @@
 		<java.version>17</java.version>
 		<spring-cloud.version>2024.0.1</spring-cloud.version> <!-- Define the Spring Cloud BOM version -->
 	</properties>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -52,8 +53,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -69,38 +70,8 @@
  			<scope>provided</scope>
 		</dependency>	
 
-		<!-- JWT Dependencies -->
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt-api</artifactId>
-			<version>0.11.5</version>
-		</dependency>
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt-impl</artifactId>
-			<version>0.11.5</version>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt-jackson</artifactId>
-			<version>0.11.5</version>
-			<scope>runtime</scope>
-		</dependency>
-
-		<!-- Spring Security -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-
-		<!-- Spring Security Test -->
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-
+		 
+		 
 		<!-- dotenv-java -->
 		<dependency>
 			<groupId>io.github.cdimascio</groupId>
@@ -114,12 +85,18 @@
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 
-		<!-- amcloud Security Shared -->
+
+		<!--spring starter actuator-->
 		<dependency>
-		  <groupId>cm.amcloud.platform</groupId>
-		  <artifactId>amcloud-security-shared</artifactId>
-	      <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!-- mono -->
+	<dependency>
+		<groupId>io.projectreactor</groupId>
+		<artifactId>reactor-core</artifactId>
+	</dependency>
 	</dependencies>
 
 	<build>
