@@ -97,13 +97,9 @@ By default, the Invitation server runs on `http://localhost:8084/`.
 
 To create an invitation:
 ```bash
-curl -X POST http://localhost:8084/api/invitations/create -d '{"recipientName":"Bob","eventName":"Conference","senderName":"Alice"}' -H "Content-Type: application/json"
+curl -X POST http://localhost:8084/api/invitations/create -d '{"email": "user@example.com"}' -H "Content-Type: application/json"
 ```
 
-To list all invitations:
-```bash
-curl -X GET http://localhost:8084/api/invitations/list
-```
 You can also use the existing invitation-test.http rest client file.
 
 ## Technologies Used
